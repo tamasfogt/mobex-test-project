@@ -1,24 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Home from "./pages/Home";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import { RootStoreProvider } from "./context/storeContext";
+import router from "./routes/index";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home></Home>,
-  },
-]);
-
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RootStoreProvider>
+      <RouterProvider router={router} />
+    </RootStoreProvider>
   </React.StrictMode>
 );
 
