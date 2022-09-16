@@ -1,4 +1,4 @@
-import { StoreContext } from "../context/storeContext";
+import { StoreContext } from "../../context/storeContext";
 import { useContext } from "react";
 
 export default function useRootStore() {
