@@ -1,4 +1,4 @@
-import { TodoStore } from "./todoStore";
+import { TodoStore } from "./todo/todoStore";
 
 export interface IRootStore {
   todoStore: TodoStore;

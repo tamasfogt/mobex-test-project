@@ -5,7 +5,7 @@ import TodoContainer from "../components/todo/TodoContainer";
 export default function Home() {
   return (
     <DefaultLayout>
-      <TodoContainer />
+      <TodoContainer title="Todo list" />
     </DefaultLayout>
   );
 }
