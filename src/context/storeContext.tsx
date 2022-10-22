@@ -2,7 +2,7 @@ import { createContext, ReactNode } from "react";
 
 import { IRootStore, RootStore } from "../store/rootStore";
 
-let store: IRootStore; // ez kell???
+let store: IRootStore;
 
 export const StoreContext = createContext<IRootStore | undefined>(undefined);
 
