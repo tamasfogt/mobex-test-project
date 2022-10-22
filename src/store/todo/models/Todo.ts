@@ -1,11 +1,13 @@
 // this is the domain object of the store.
+
+import { makeAutoObservable } from "mobx";
+
 export interface ITodo {
   id: string;
   title: string;
   description?: string;
   completed: boolean;
 }
-// TODO ide alá kell még egy class ami a domain object lesz
 
 export class Todo implements ITodo {
   id: string;
@@ -14,9 +16,10 @@ export class Todo implements ITodo {
   completed: boolean = false;
 
   constructor(id: string, title: string, description: string) {
-    // TODO lehet ide kell egy makeAutoObservable...
     this.id = id;
     this.title = title;
     this.description = description;
+
+    makeAutoObservable(this);
   }
 }

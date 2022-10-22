@@ -2,13 +2,15 @@ import TodoListItem from "./TodoListItem";
 import List from "@mui/material/List";
 
 import { observer } from "mobx-react-lite";
+import useTodoStore from "../../hooks/stores/useTodoStore";
 
 function TodoList() {
-  // TODO load todos from store
+  const todoStore = useTodoStore();
   return (
     <List>
-      <TodoListItem />
-      <TodoListItem />
+      {todoStore.todos.map((item) => (
+        <TodoListItem /> // TODO itt majd még használni kell az értékeket..
+      ))}
     </List>
   );
 }
